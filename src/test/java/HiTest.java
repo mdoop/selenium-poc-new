@@ -33,7 +33,10 @@ public class HiTest {
   @Before
   public void setUp() {
 	  
-	  WebDriverManager.chromedriver().setup();
+	  System.setProperty("webdriver.chrome.driver", "/jenkins/jobs/SeleniumPOC/workspace/chromedriver.exe");
+
+	 
+	 
 	  
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
