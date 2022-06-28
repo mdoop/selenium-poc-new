@@ -33,7 +33,7 @@ public class HiTest {
   @Before
   public void setUp() {
 	  
-	 System.setProperty("webdriver.chrome.driver", "resources\\chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
 
 	 
 	 
