@@ -33,7 +33,7 @@ public class HiTest {
   @Before
   public void setUp() {
 	  
-	 System.setProperty("webdriver.chrome.driver", "/jenkins/jobs/SeleniumPOC/workspace/chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "/jenkins/jobs/SeleniumPOC/workspace/chromedriver");
 
 	 
 	 
