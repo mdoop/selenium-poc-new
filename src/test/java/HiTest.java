@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
@@ -33,9 +34,15 @@ public class HiTest {
   @Before
   public void setUp() {
 	  
-	 System.setProperty("webdriver.chrome.driver", "/jenkins/jobs/SeleniumPOC/workspace/chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "/jenkins/jobs/SeleniumPOC/workspace/chromedriver");
 
-	 
+	 ChromeOptions options = new ChromeOptions();
+	 //options.setExperimentalOption("prefs", chromePrefs);
+	 options.addArguments("--no-sandbox");
+	 options.addArguments("--headless"); //!!!should be enabled for Jenkins
+	 options.addArguments("--disable-dev-shm-usage"); //!!!should be enabled for Jenkins
+	 options.addArguments("--window-size=1920x1080"); //!!!should be enabled for Jenkins
+	 driver = new ChromeDriver(options);
 	 
 	  
     driver = new ChromeDriver();
